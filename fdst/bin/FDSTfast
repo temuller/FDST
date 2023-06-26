@@ -41,14 +41,14 @@ for t in toforget:
 
 ##################### opening setup ##########################
 
-print ''
-question = raw_input('Do you have a list of spectra ? ([yes]/no) ')
+print('')
+question = input('Do you have a list of spectra ? ([yes]/no) ')
 if not question:
     question = 'yes'
 
-print ''
+print('')
 if question == 'yes' or question == 'y' or question == 'Y' or question == 'Yes' or question == 'YES':
-	files = raw_input('List ? [e.g. list, list.txt, list.dat] ')
+	files = input('List ? [e.g. list, list.txt, list.dat] ')
 	lcf = open(files,'r')
 	riga = lcf.readlines()
 	lcf.close()
@@ -57,7 +57,7 @@ if question == 'yes' or question == 'y' or question == 'Y' or question == 'Yes' 
 		p = line.split()
 		snlist.append(p[0])
 else:
-	files = raw_input('List the spectra (space separated list) to use: ')
+	files = input('List the spectra (space separated list) to use: ')
 	snlist = string.split(files)
 
 ######################### load metadata files ################
@@ -156,8 +156,8 @@ while ii != len(snlist):
     ax.xaxis.set_minor_locator(MultipleLocator(100))
     show()
 
-    print ''
-    _questionat = raw_input('Which one does remove better the telluric lines (give the number) ? (1=dark orange, 2=orange, 3=yellow, 4=green, 5=cyan, [6]=black, 7=blue, 8=purple, 9=magenta, 10=pink, 11=red) ')
+    print('')
+    _questionat = input('Which one does remove better the telluric lines (give the number) ? (1=dark orange, 2=orange, 3=yellow, 4=green, 5=cyan, [6]=black, 7=blue, 8=purple, 9=magenta, 10=pink, 11=red) ')
     if not _questionat:
         questionat = 6
     else:
@@ -219,6 +219,6 @@ while ii != len(snlist):
 
 then = time.time()
 time = then -now
-print ''
-print 'Extraction and calibration done in %.0is ' % (time)
-print ''
+print('')
+print('Extraction and calibration done in %.0is ' % (time))
+print('')

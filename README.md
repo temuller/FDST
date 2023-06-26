@@ -4,7 +4,7 @@ Fast and Dark Side of Transient - spectra pipeline
 The Fast and Dark Side of Transient experiment Fast extraction pipeline
 (FDSTfast) is based on scipy, numpy, pylab and pyraf packages
 
-The user can introduce the files/valuew or hit enter. In the last case the
+The user can introduce the files/values or hit enter. In the last case the
 values between brackets will be taken as default value.
 
 The input is a Liverpool telescope spectrum.

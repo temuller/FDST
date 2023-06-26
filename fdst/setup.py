@@ -1,8 +1,6 @@
 from distutils.core import setup
 from distutils.command.install import INSTALL_SCHEMES
-from os import sys, path
-import os,shutil,re
-from glob import glob
+from os import sys
 for scheme in INSTALL_SCHEMES.values():
     scheme['data'] = scheme['purelib']
 
@@ -26,7 +24,7 @@ except: sys.exit('### Error: python module matplotlib not found')
 
 setup(
     name='fdst',
-    version='1.0.0',
+    version='1.1.0',
     author='C.Inserra',
     author_email='InserraC@cardiff.ac.uk',
     classifiers=[
@@ -37,10 +35,10 @@ setup(
         'Development Status :: 4 - Beta',
         'Intended Audience :: General users',
         'Topic :: Astronomy :: spectra extraction',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.9',
     ],
     scripts=['bin/FDSTfast'],
-    url='https://github.com/cinserra',
+    url='https://github.com/temuller/FDST',
     license=open('LICENSE.rst').read(),
     description='FDSTfast is a package for Liverpool Telescope (SPRAT) spectra extraction',
     long_description=open('README.rst').read(),

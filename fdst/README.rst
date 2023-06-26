@@ -4,6 +4,7 @@
 							 ----------------
 
 					C. Inserra  v1.0.0 21/01/2019
+                                        T. Müller-Bravo v1.1.0 26/06/2023
 
 ###########################################################################
 The package contains:
@@ -39,9 +40,9 @@ or open a ticket on https://github.com/cinserra (best way)
 
 						INSTALLATION
 
-FDSTfast is written in python and requires the following package:
+FDSTfast v1.1.0+ is written in python and requires the following package:
 
-- Python 2.7
+- Python 3.9+
    these modules have to be installed:
         - numpy
         - scipy
@@ -53,7 +54,7 @@ If you have ASTROCONDA installed is even better. Otherwise you can
 retrieve it here: https://astroconda.readthedocs.io/en/latest/
 The ideal distribution is that with the IRAF legacy value
 https://astroconda.readthedocs.io/en/latest/installation.html#legacy-software-stack-with-iraf
-(activate conda iraf27)
+(activate conda iraf39)
 
 ###########################################################################
 1) extract the files from the tarball
@@ -91,8 +92,8 @@ FDSTfast
 5) to do so type the following commands:
 
 > which FDSTfast
-(e.g. /Users/cosmo/anaconda2/envs/iraf27/bin/FDSTfast )
-> rm -rf /Users/cosmo/anaconda2/envs/iraf27/bin/FDSTfast
+(e.g. /Users/cosmo/anaconda2/envs/iraf39/bin/FDSTfast )
+> rm -rf /Users/cosmo/anaconda2/envs/iraf39/bin/FDSTfast
 (check if you do not have other bin with FDSTfast)
 
 6) open python:
@@ -101,12 +102,12 @@ FDSTfast
 
 >>> import fdst
 >>> fdst.__path__
-(e.g. ['/Users/spxci1/anaconda2/envs/iraf27/lib/python2.7/site-packages/fdst'])
+(e.g. ['/Users/spxci1/anaconda2/envs/iraf27/lib/python3.9/site-packages/fdst'])
 
 7) then on the terminal (or X11):
 
-> rm -rf /Users/cosmo/anaconda2/envs/iraf27/lib/python2.7/site-packages/fdst
-> rm -rf /Users/cosmo/anaconda2/envs/iraf27/lib/python2.7/site-packages/fdst*.egg-info
+> rm -rf /Users/cosmo/anaconda2/envs/iraf27/lib/python3.9/site-packages/fdst
+> rm -rf /Users/cosmo/anaconda2/envs/iraf27/lib/python3.9/site-packages/fdst*.egg-info
 
 ALTERNATIVE:
 If you used the option " --record files.txt " during the installation
