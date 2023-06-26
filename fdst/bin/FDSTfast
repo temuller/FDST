@@ -100,6 +100,7 @@ while ii != len(snlist):
 
     specf = re.sub('.fits', '_f.fits', spec)
     iraf.onedspec.calibrate(input=spec, output=specf, sensiti=sensfile, extinct='yes',flux='yes', ignorea='yes', extinction=extinctionfile, observatory='lapalma', airmass=AIRMASS, exptime=EXPTIME, fnu='no')
+    print('Sens func. applied')
 
     spect10 = re.sub('.fits', '_e10.fits', specf)
     iraf.sarit(input1=specf,op='/',input2=atmofile, output=spect10)
@@ -136,8 +137,8 @@ while ii != len(snlist):
         xx = iraf.listpixel('tmp.fits',wcs='world',Stdout=1)
         lam,fl =[],[]
         for x in xx:
-             lam.append(float(string.split(x)[0]))
-             fl.append(float(string.split(x)[1]))
+             lam.append(float( x.split()[0] ))
+             fl.append(float( x.split()[1] ))
 
         fl2 = []
         for z in fl:

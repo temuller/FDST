@@ -136,8 +136,8 @@ while ii != len(snlist):
         xx = iraf.listpixel('tmp.fits',wcs='world',Stdout=1)
         lam,fl =[],[]
         for x in xx:
-             lam.append(float(string.split(x)[0]))
-             fl.append(float(string.split(x)[1]))
+             lam.append(float( x.split()[0] ))
+             fl.append(float( x.split()[1] ))
 
         fl2 = []
         for z in fl:
